@@ -12,16 +12,40 @@
 
         
        // STEP #2: Get user commands 
-       command = getCommand("Do you want to start upstairs or downstairs ");
+       command = getCommand("Do you want to start upstairs or downstairs?(u/d) ");
       // STEP #3: Select a path based on user's command 
-      if (command.equals("e"))
-          {
-System.out.println("You ride the escalator up. At the top, you see the carousel spinning with kids screaming. A worker waves at you.");
-            System.out.println("You reach the carousel.");       
-   }
-   else if (command.equals("n")) {
-      System.out.println("You walk downstairs to eat food");
-   }
+      if (command.equals("u"))
+      {
+         System.out.println("You ride the escalator up. At the top, you see the carousel spinning with kids screaming. A worker waves at you.");
+
+         command = getCommand("Do you stop in ulta? (y/n)");
+         if (command.equals("y"))
+         {
+            System.out.println(" Ulta falls down on you");
+         }
+
+         else if (command.equals("n"))
+         {
+            System.out.println("You keep walking in the mall.");
+
+         }
+
+         if (command.equals("l")) 
+{
+  System.out.println("You look for more stores");
+  // NEXT BRANCH...
+  command = getCommand("Go into Bath and Body Works (y/n)");
+  if (command.equals("y"))
+  {
+    System.out.println("You buy items and got them on sale!");
+  }
+  else if (command.equals("y"))
+  {
+    System.out.println("You keep walking in the mall.");
+  }
+}
+      }
+
    else{
       System.out.println("GAME OVER! You got lost in the time Zara and got lost for hours. Press RUN to replay.");
    }
@@ -34,10 +58,9 @@ System.out.println("You ride the escalator up. At the top, you see the carousel 
     */
     public static String getCommand(String prompt) 
     {
-       System.out.println("\n▶︎▶︎▶︎ " + prompt);
+       System.out.println("\n▶︎▶︎▶︎" + prompt);
        Scanner scan = new Scanner(System.in);
        String command = scan.nextLine().toLowerCase();
-       scan.close();
        return command;
     } // END OF METHOD
  } // END OF CLASS
