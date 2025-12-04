@@ -6,7 +6,7 @@
        System.out.println("Starting a new adventure...\n");
        String command = ""; // stores the user's choices
 
-       // STEP #1: Describe current scenatio
+      // STEP #1: Describe current scenatio
        System.out.println(" You are at a mall in Long island");
       System.out.println("It's crowded, loud, and smells like Auntie Annes pretzels.");
 
@@ -27,23 +27,20 @@
          else if (command.equals("n"))
          {
             System.out.println("You keep walking in the mall.");
+              System.out.println("You look for more stores");
+               // NEXT BRANCH...
+               command = getCommand("Go into Bath and Body Works (y/n)");
+                if (command.equals("y"))
+               {
+                System.out.println("You buy items and got them on sale!");
+                }
+               else if (command.equals("y"))
+               {
+                System.out.println("You keep walking in the mall.");
+  }
 
          }
 
-         if (command.equals("l")) 
-{
-  System.out.println("You look for more stores");
-  // NEXT BRANCH...
-  command = getCommand("Go into Bath and Body Works (y/n)");
-  if (command.equals("y"))
-  {
-    System.out.println("You buy items and got them on sale!");
-  }
-  else if (command.equals("y"))
-  {
-    System.out.println("You keep walking in the mall.");
-  }
-}
       }
 
    else{
