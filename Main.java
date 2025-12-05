@@ -34,7 +34,7 @@
                {
                 System.out.println("You buy items and got them on sale!");
                 }
-               else if (command.equals("y"))
+               else if (command.equals("n"))
                {
                 System.out.println("You keep walking in the mall.");
   }
